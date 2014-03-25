@@ -1,0 +1,8 @@
+
+// Spot Extending and Overwriting styles
+
+@include eEx(spot, footer) {
+	background-color: $color_geramontRed;
+	color: $color_white;
+	font-family: $font_textileRegular;
+}

@@ -1,0 +1,152 @@
+
+$_blockName: 'geramont';
+
+@include block($_blockName) {
+	@include gradient($color_lightsand, $color_lightsand, $color_deepsand);
+	color: $color_black;
+	@include e(header) {
+		@include clearfix();
+		display: block;
+		width: 100%;
+		position: relative;
+		margin-bottom: 15px;
+		//top: -5px;
+		//margin-bottom: 5px;
+		@include e(logo) {
+			display: block;
+			float: left;
+			background-image: url("/img/logo-geramont.png");
+			background-repeat: no-repeat;
+			background-position: center center;
+			width: 208px;
+			height: 77px;
+			position: relative;
+			//top: -5px;
+		}
+		@include e(nav) {
+			overflow: hidden;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 208px;
+			padding-left: 35px;
+			ul {
+				@include clearfix();
+				@include ulNav();
+				li {
+					margin-left: 5px;
+					&:first-child {
+						margin-left: 0;
+					}
+					&:hover,
+					&.is-active {
+						a {
+							color: $color_white;
+							background-image: url("/img/geramont_banner.png");
+							background-position: center center;
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+							&:after {
+								content: "";
+								display: block;
+								position: absolute;
+								right: 1%;
+								bottom: 1px;
+								width: 14px;
+								height: 11px;
+								background-image: url("/img/geramont_banner_corner.png");
+								background-repeat: no-repeat;
+							}
+						}
+					}
+					a {
+						@include fontSize(epsilon,1);
+						font-family: $font_ministerBold;
+						display: block;
+						color: $color_geramontRed;
+						cursor: pointer;
+						position: relative;
+						padding: 10px 15px 10px 10px;
+					}
+				}
+			}
+		}
+	}
+	@include e(content) {
+
+	}
+	@include e(productlist widgetlist) {
+		li {
+			position: relative;
+			padding-left: image-width("img/arrow_geramont.png") + 10px !important;
+			&:before {
+				display: block;
+				position: absolute;
+				content: "";
+				background-image: url("/img/arrow_geramont.png");
+				width: image-width("img/arrow_geramont.png");
+				min-height: image-height("img/arrow_geramont.png");
+				background-position: left center;
+				background-repeat: no-repeat;
+				left: 0;
+				top: 0;
+				bottom: 0;
+			}
+		}
+	}
+	h1 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	h2 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	h3 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	h4 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	p {
+		@include fontSize(delta, 1.5);
+		font-family: Arial, "Myriad Pro", Sans;
+		color: $color_coal;
+	}
+	// Tests
+	& * {
+		&:before {
+			@if $showClasses {
+				@include fontSize(beta);
+				content: attr(class);
+				background-color: rgba($color_geramontRed, 0.2);
+			}
+		}
+	}
+	// Alterations
+	@include crossAlter(".spot__footer") {
+		background-color: $color_geramontRed;
+		color: $color_white;
+		font-family: $font_textileRegular;
+	}
+}
+
+
+
+@include eEx(box, inner) {
+	color: #ff69b4;
+}
+
+@include eEx(box, inner, testModifier) {
+	color: navajowhite;
+}
+
+@include eEx(box, "", "3x2") {
+	color: royalblue;
+}
+
+@include eEx(box) {
+	color: rosybrown;
+}

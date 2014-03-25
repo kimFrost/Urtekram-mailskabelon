@@ -1,0 +1,38 @@
+
+// Brand Extending and Overwriting styles
+
+@include eEx(brand, logo) {
+	background-image: url("/img/logo-geramont.png");
+	width: 208px;
+	height: 77px;
+}
+
+@include eEx(brand, "", "3x2") {
+	//color: royalblue;
+}
+
+@include eEx(brand, nav) {
+	ul {
+		li {
+			&:hover,
+			&.is-active {
+				a {
+					background-image: url("/img/geramont_banner.png");
+					&:after {
+						right: 1%;
+						bottom: 1px;
+						width: 14px;
+						height: 11px;
+						background-image: url("/img/geramont_banner_corner.png");
+						background-repeat: no-repeat;
+					}
+				}
+			}
+			a {
+				@include fontSize(epsilon,1);
+				font-family: $font_ministerBold;
+				color: $color_geramontRed;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+
+$_blockName: 'geramont';
+
+@include block($_blockName) {
+	@include gradient($color_lightsand, $color_lightsand, $color_deepsand);
+	color: $color_black;
+	h1 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	h2 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	h3 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	h4 {
+		font-family: $font_textileRegular;
+		color: $color_geramontRed;
+	}
+	p {
+		@include fontSize(delta, 1.5);
+		font-family: Arial, "Myriad Pro", Sans;
+		color: $color_coal;
+	}
+}

@@ -1,0 +1,43 @@
+
+$_blockName: 'thatworks';
+
+//$_hexgrid_hexHeight: 100px;
+
+@include block($_blockName) {
+	@include fill();
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: $color_deepsea;
+	color: $color_white;
+	background-image: url(/img/texture/noise.png);
+	background-repeat: repeat;
+	z-index: 1;
+	&:before {
+		@include fill();
+		content: "";
+		display: block;
+		z-index: 0;
+
+
+		background: -moz-linear-gradient(-55deg,  rgba(0,0,0,0.12) 0%, rgba(255,255,255,0.12) 50%, rgba(0,0,0,0.12) 100%);
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,0.12)), color-stop(50%,rgba(255,255,255,0.12)), color-stop(100%,rgba(0,0,0,0.12)));
+		background: -webkit-linear-gradient(-55deg,  rgba(0,0,0,0.12) 0%,rgba(255,255,255,0.12) 50%,rgba(0,0,0,0.12) 100%);
+		background: -o-linear-gradient(-55deg,  rgba(0,0,0,0.12) 0%,rgba(255,255,255,0.12) 50%,rgba(0,0,0,0.12) 100%);
+		background: -ms-linear-gradient(-55deg,  rgba(0,0,0,0.12) 0%,rgba(255,255,255,0.12) 50%,rgba(0,0,0,0.12) 100%);
+		background: linear-gradient(155deg,  rgba(0,0,0,0.12) 0%,rgba(255,255,255,0.12) 50%,rgba(0,0,0,0.12) 100%);
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f000000', endColorstr='#1f000000',GradientType=1 );
+
+		//@include background-image(linear-gradient(left top,  rgba(0,0,0,0.12) 0%,rgba(255,255,255,0.12) 50%,rgba(0,0,0,0.12) 100%));
+
+	}
+
+	@include e(container) {
+		@include containerArea();
+		z-index: 1;
+	}
+	@include e(content) {
+		@include contentArea();
+		z-index: 1;
+	}
+}
