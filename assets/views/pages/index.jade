@@ -5,7 +5,7 @@ extends ../master
 block append newsContent
 	tr
 		td(height="20")
-	tr
+	tr(mc:hideable)
 		td
 			img(src="img/headline_welcome.png", mc:edit="editor_headline_welcome_image")
 	tr
@@ -25,7 +25,7 @@ block append newsContent
 										td(valign="top")
 											img(src="img/content_img_01.jpg", mc:edit="editor_content1_image")
 										td(width="30")
-										td(valign="top", style="font-size: 12px;color:#000;")
+										td(valign="top", style="font-size: 12px; color:#000; background-color: #c6ac89;")
 											h2(style="font-size: 18px;color:#262526;margin-top: 10px;")
 												span(mc:edit="editor_content1_headline") Hovednyhedens område
 											div(mc:edit="editor_content1_body")
@@ -44,8 +44,8 @@ block append newsContent
 							table(width="100%", cellspacing="0", cellpadding="0", border="0")
 								tbody
 									tr
-										td(valign="top", style="font-size: 12px;color:#000;")
-											h2(style="font-size: 18px;color:#262526;margin-top:10px;")
+										td(valign="top", style="font-size: 12px; color:#000; background-color: #c6ac89;")
+											h2(style="font-size: 18px; color:#262526; margin-top:10px;")
 												span(mc:edit="editor_content2_headline") Hovednyhedens område
 											div(mc:edit="editor_content2_body")
 												p
@@ -81,7 +81,7 @@ block append productsContent
 												td
 													img(src="img/content_product_01.jpg", mc:edit="editor_product#{i}_image")
 											tr
-												td(style="font-size: 12px;", mc:edit="editor_product#{i}_text") Lorem ipsum dolor sit met, consectetuer. ipiscing elit.
+												td(style="font-size: 12px; background-color: #c6ac89", mc:edit="editor_product#{i}_text") Lorem ipsum dolor sit met, consectetuer. ipiscing elit.
 
 block append blogContent
 	tr
@@ -108,11 +108,11 @@ block append blogContent
 												img(src="img/content_blog_01.jpg", mc:edit="editor_repeat_blog_post_image")
 											td(width="20")
 											td(valign="top", align="left", style="color: #000;")
-												h2(style="margin-bottom: 3px; font-size: 18px; font-weight: normal; margin-top: 5px; color: #262526;", mc:edit="editor_repeat_blog_post_headline") Amet dolar 0sit lorem amet dolar lorem
-												p(style="font-size: 10px", mc:edit="editor_repeat_blog_post_writer")
+												h2(style="margin-bottom: 3px; font-size: 18px; font-weight:normal; margin-top:5px; color:#262526; background-color:#ffffff", mc:edit="editor_repeat_blog_post_headline") Amet dolar 0sit lorem amet dolar lorem
+												p(style="font-size: 10px; background-color: #ffffff", mc:edit="editor_repeat_blog_post_writer")
 													| Udgivet den 3. december 2013 af
 													a(style="color: #8b7250;")  Jeanette
-												p(style="font-size: 12px;", mc:edit="editor_repeat_blog_post_content") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor.
+												p(style="font-size: 12px; background-color: #ffffff", mc:edit="editor_repeat_blog_post_content") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor.
 												p
 													div(mc:edit="editor_blog_link")
 														a(href="#")
@@ -143,7 +143,7 @@ block append recipeContent
 										tr
 											td(colspan="3", height="20")
 										tr
-											td(colspan="3", align="left")
+											td(colspan="3", align="left", style="background-color: #c6ac89")
 												h2(style="font-size: 18px;margin-bottom: 5px;", mc:edit="editor_repeat_recipe_headline") Knasende lakridsristede speltflager med blå kornblomster
 													span(style="font-size: 12px;") (4 pers.)
 												p(mc:edit="editor_repeat_recipe_writer") Opskrift af: Personens navn
@@ -153,7 +153,7 @@ block append recipeContent
 											td(width="294", valign="top")
 												img(src="img/content_recipe_01.jpg", mc:edit="editor_repeat_recipe_image")
 											td(width="20")
-											td(style="font-size: 12px;", mc:edit="editor_repeat_recipe_content")
+											td(style="font-size: 12px; background-color: #c6ac89", mc:edit="editor_repeat_recipe_content")
 												h2 Om opskriften
 												p Denne portion er nok til mange forskellige sommerdesserter. Det ristede knas er velegnet til drys på hjemmebagte kager og desserter, yoghurt eller koldskål.
 												br
@@ -179,7 +179,7 @@ block append recipeContent
 											td(colspan="3", height="30")
 					tr
 						td(align="center",colspan="3")
-							div(mc:edit="editor_recipe_link")
+							div(mc:edit="editor_recipe_link", style="background-color: #c6ac89")
 								a(href="#")
 									img(src="img/graphic_readmore2.png")
 					tr
