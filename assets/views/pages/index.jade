@@ -86,13 +86,16 @@ block append productsContent
 block append blogContent
 	tr
 		td
-			img(src="img/headline_blog.png", mc:edit="editor_headline_blog_image")
-	tr
-		td
-			img(src="img/spacer_dotted.png")
-	tr
-	tr
-		td(height="15")
+			table(width="100%", cellspacing="0", cellpadding="0", border="0", mc:hideable)
+				tbody
+					tr
+						td
+							img(src="img/headline_blog.png", mc:edit="editor_headline_blog_image")
+					tr
+						td
+							img(src="img/spacer_dotted.png")
+					tr
+						td(height="15")
 	tr
 		td
 			table(width="100%", cellspacing="0", cellpadding="0", border="0", style="font-size: 12px; text-align: left;")
@@ -117,10 +120,8 @@ block append blogContent
 													div(mc:edit="editor_blog_link")
 														a(href="#")
 															img(src="img/graphic_readmore.png")
-										tr
-											td(colspan="3",height="30")
-
-
+	tr(mc:hideable)
+		td(height="30")
 
 block append recipeContent
 	tr
