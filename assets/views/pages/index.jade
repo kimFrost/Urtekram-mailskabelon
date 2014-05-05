@@ -120,17 +120,20 @@ block append blogContent
 													div(mc:edit="editor_blog_link")
 														a(href="#")
 															img(src="img/graphic_readmore.png")
-	tr(mc:hideable)
-		td(height="30")
+										tr
+											td(height="30", colspan="3")
 
 block append recipeContent
 	tr
 		td
-			img(src="img/headline_recipes.png", mc:edit="editor_headline_recipes_image")
-	tr
-		td
-			img(src="img/spacer_dotted.png")
-	tr
+			table(width="100%", cellspacing="0", cellpadding="0", border="0", mc:hideable)
+				tbody
+					tr
+						td
+							img(src="img/headline_recipes.png", mc:edit="editor_headline_recipes_image")
+					tr
+						td
+							img(src="img/spacer_dotted.png")
 	tr
 		td
 			table(width="100%", cellspacing="0", cellpadding="0", border="0", style="font-size: 12px; text-align: left;")
