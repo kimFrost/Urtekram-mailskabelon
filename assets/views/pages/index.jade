@@ -190,6 +190,42 @@ block append recipeContent
 						td(colspan="3", height="20")
 
 
+block append competitionContent
+	tr
+		td
+			table(width="100%", cellspacing="0", cellpadding="0", border="0", mc:hideable)
+				tbody
+					tr
+						td
+							img(src="img/headline_competition.png", mc:edit="editor_headline_competition_image")
+					tr
+						td
+							img(src="img/spacer_dotted.png")
+					tr
+						td(height="15")
+	tr
+		td
+			table(width="100%", cellspacing="0", cellpadding="0", border="0", style="font-size: 12px; text-align: left;")
+				tbody
+					// mc:repeatable
+					- for (var i = 1; i < 2; i++)
+						tr(mc:repeatable="editor_repeat_competition_post")
+							td
+								table
+									tbody
+										tr
+											td(valign="top", align="left", width="165")
+												img(src="img/content_blog_01.jpg", mc:edit="editor_repeat_competition_post_image")
+											td(width="20")
+											td(valign="top", align="left", style="color: #000;")
+												h2(style="margin-bottom: 3px; font-size: 18px; font-weight:normal; margin-top:5px; color:#262526; background-color:#f7f7f7", mc:edit="editor_repeat_competition_post_headline") Amet dolar 0sit lorem amet dolar lorem
+												p(style="font-size: 12px; background-color: #f7f7f7", mc:edit="editor_repeat_competition_post_content") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor.
+												p
+													div(mc:edit="editor_competition_link")
+														a(href="#")
+															img(src="img/graphic_participate.png")
+										tr
+											td(height="30", colspan="3")
 
 
 block append footerContent
